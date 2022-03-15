@@ -1,7 +1,6 @@
 # SAN-FAPL
-This repository contains source codes for our paper: "Feedback-efficient Active Preference Learning for Socially Aware Robot Navigation" in IROS-2022.
-For more details, please refer to [our project website](https://sites.google.com/view/san-fapl) and [arXiv preprint](https://arxiv.org/abs/). 
-For experiment demonstrations, please refer to the [youtube video](https://youtu.be/).
+This repository contains source codes for our paper: "Feedback-efficient Active Preference Learning for Socially Aware Robot Navigation" with submitted in IROS-2022.
+For more details, please refer to [our project website](https://sites.google.com/view/san-fapl)
 
 
 ## Abstract
@@ -9,7 +8,7 @@ Socially aware robot navigation, where a robot is required to optimize its traje
 
 
 ## Overview Architecture for FAPL
-<img src="/figures/architecture.png" width="450" />
+<img src="/figures/architecture.png" width="800" />
 
 
 ### Set Up
@@ -58,10 +57,13 @@ python plot.py
 ## Learning Curve
 
 Simulator: This project uses a 22 m × 20 m two-dimensional space, and the yellow circle indicates the robot. The blue dotted line illustrates the robot FoV, humans that can be detected by the robot are green circles while those out of robot view are red circles. The red star is the robot goal, and the orientation and number of each agent are presented as a red arrow and a black number respectively.
+
 <img src="/figures/environment.jpg" width="300" />
 
 Learning curves of FAPL and other policies.
+
 <img src="/figures/curve_sr.png" width="450" />
+
 <img src="/figures/curve_df.png" width="450" />
 
 ## Citation
