@@ -9,8 +9,7 @@ Socially aware robot navigation, where a robot is required to optimize its traje
 
 
 ## Overview Architecture for FAPL
-<img src="/figures/architecture.pdf" width="450" />
-<img src="/figures/environment.jpg" width="300" />
+<img src="/figures/architecture.png" width="450" />
 
 
 ### Set Up
@@ -34,6 +33,11 @@ pip install -e .
 
 
 ### Run the code
+0. Develop experts demonstrations for hybrid experience learning.
+```
+python demonstration_api.py --vis
+```
+
 1. Train a policy with preference learning. 
 ```
 python train_FAPL.py 
@@ -41,7 +45,7 @@ python train_FAPL.py
 
 2. Test policies.
 ```
-python test_FAPL.py --vis 
+python test_FAPL.py
 ```
 
 3. Plot training curve.
@@ -49,16 +53,14 @@ python test_FAPL.py --vis
 python plot.py
 ```
 
-4. Demonstration_api.
-```
-python demonstation_api.py --vis 
-```
-
-(We only tested our code in Ubuntu 18.04 with Python 3.6.)
+(The code was tested in Ubuntu 18.04 with Python 3.6.)
 
 ## Learning Curve
-Learning curves of FAPL in 360 degrees FoV environment with 10 humans.
 
+Simulator: This project uses a 22 m × 20 m two-dimensional space, and the yellow circle indicates the robot. The blue dotted line illustrates the robot FoV, humans that can be detected by the robot are green circles while those out of robot view are red circles. The red star is the robot goal, and the orientation and number of each agent are presented as a red arrow and a black number respectively.
+<img src="/figures/environment.jpg" width="300" />
+
+Learning curves of FAPL and other policies.
 <img src="/figures/curve_sr.png" width="450" />
 <img src="/figures/curve_df.png" width="450" />
 
@@ -80,15 +82,11 @@ Other contributors:
 
 Part of the code is based on the following repositories:  
 
-[1] C. Chen, Y. Liu, S. Kreiss, and A. Alahi, “Crowd-robot interaction: Crowd-aware robot navigation with attention-based deep reinforcement learning,” in International Conference on Robotics and Automation (ICRA), 2019, pp. 6015–6022.
-(Github: https://github.com/vita-epfl/CrowdNav)
+[1] (Github: https://github.com/vita-epfl/CrowdNav)
 
-[2] A,B
-(Github: https://github.com/Shuijing725/CrowdNav_DSRNN)
+[2] (Github: https://github.com/Shuijing725/CrowdNav_DSRNN)
 
-[3] K. Lee, L. M. Smith, and P. Abbeel, “Pebble: Feedback-efficient interactive reinforcement learning via relabeling experience and un-supervised pre-training,” in International Conference on Machine
-Learning. PMLR, 2021, pp. 6152–6163
-(Github: https://github.com/rll-research/B_Pref)
+[3] (Github: https://github.com/rll-research/B_Pref)
 
 
 
